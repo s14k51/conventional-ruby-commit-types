@@ -14,3 +14,12 @@ module.exports.conventionalTypes = Object.keys(conventionalTypesInfo);
 module.exports.conventionalRubyTypesInfo = conventionalRubyTypesInfo;
 
 module.exports.conventionalRubyTypes = Object.keys(conventionalRubyTypesInfo);
+
+module.exports.configureWidths = function configureWidths(widths = {}) {
+  const { maxHeaderWidth = 50, maxLineWidth = 72 } = widths;
+
+  return {
+    maxHeaderWidth,
+    maxLineWidth,
+  };
+};
