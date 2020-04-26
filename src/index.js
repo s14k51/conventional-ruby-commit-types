@@ -1,19 +1,19 @@
-const { types: conventionalTypesInfo } = require('conventional-commit-types');
+const { types: convTypesInfo } = require('conventional-commit-types');
 
 const customTypesInfo = require('./customTypesInfo');
 
-const conventionalRubyTypesInfo = {
-  ...conventionalTypesInfo,
+const typesInfo = {
+  ...convTypesInfo,
   ...customTypesInfo,
 };
 
-module.exports.conventionalTypesInfo = conventionalTypesInfo;
+module.exports.convTypesInfo = convTypesInfo;
 
-module.exports.conventionalTypes = Object.keys(conventionalTypesInfo);
+module.exports.convTypes = Object.keys(convTypesInfo);
 
-module.exports.conventionalRubyTypesInfo = conventionalRubyTypesInfo;
+module.exports.typesInfo = typesInfo;
 
-module.exports.conventionalRubyTypes = Object.keys(conventionalRubyTypesInfo);
+module.exports.types = Object.keys(typesInfo);
 
 module.exports.configureWidths = function configureWidths(widths = {}) {
   const { maxHeaderWidth = 50, maxLineWidth = 72 } = widths;
