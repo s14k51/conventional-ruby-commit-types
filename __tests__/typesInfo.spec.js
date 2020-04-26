@@ -1,15 +1,15 @@
-const { types: typesInfo } = require('conventional-commit-types');
+const { types } = require('conventional-commit-types');
 
-const { conventionalTypesInfo, conventionalRubyTypesInfo } = require('../src');
+const { convTypesInfo, typesInfo } = require('../src');
 
 describe('typesInfo', () => {
   it('conventionalTypesInfo', () => {
-    expect(conventionalTypesInfo).toStrictEqual(typesInfo);
+    expect(convTypesInfo).toStrictEqual(types);
   });
 
   it('conventionalRubyTypesInfo', () => {
-    expect(conventionalRubyTypesInfo).toStrictEqual({
-      ...typesInfo,
+    expect(typesInfo).toStrictEqual({
+      ...types,
       wip: {
         description: "A 'wip' type. Use this ONLY if you plan to cherry-pick its changes later into your working branch",
         title: 'WIP',
