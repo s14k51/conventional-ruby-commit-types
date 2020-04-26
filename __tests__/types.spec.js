@@ -1,8 +1,8 @@
-const { conventionalTypes, conventionalRubyTypes } = require('../src');
+const { convTypes, types } = require('../src');
 
 describe('types', () => {
   it('conventionalTypes', () => {
-    expect(conventionalTypes).toStrictEqual([
+    expect(convTypes).toStrictEqual([
       'feat',
       'fix',
       'docs',
@@ -18,7 +18,7 @@ describe('types', () => {
   });
 
   it('conventionalRubyTypes', () => {
-    expect(conventionalRubyTypes).toStrictEqual([
+    expect(types).toStrictEqual([
       'feat',
       'fix',
       'docs',
