@@ -1,3 +1,2 @@
 hooks:
-  commit-msg: commitlint -x ruby -E HUSKY_GIT_PARAMS
-  pre-push: yarn lint && yarn test && commitlint -x ruby/no-wip -f master -t HEAD
+  pre-push: npm run lint && npm test
