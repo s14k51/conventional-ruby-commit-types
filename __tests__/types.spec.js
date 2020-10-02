@@ -1,36 +1,28 @@
-const { convTypes, types } = require('../src');
+const { types, noWIPTypes } = require('../src');
 
 describe('types', () => {
-  it('conventionalTypes', () => {
-    expect(convTypes).toStrictEqual([
-      'feat',
-      'fix',
-      'docs',
-      'style',
-      'refactor',
-      'perf',
-      'test',
-      'build',
-      'ci',
-      'chore',
-      'revert',
-    ]);
-  });
-
-  it('conventionalRubyTypes', () => {
+  it('types', () => {
     expect(types).toStrictEqual([
       'feat',
       'fix',
-      'docs',
-      'style',
       'refactor',
       'perf',
       'test',
-      'build',
-      'ci',
+      'docs',
       'chore',
-      'revert',
       'wip',
+    ]);
+  });
+
+  it('noWIPTypes', () => {
+    expect(noWIPTypes).toStrictEqual([
+      'feat',
+      'fix',
+      'refactor',
+      'perf',
+      'test',
+      'docs',
+      'chore',
     ]);
   });
 });

@@ -1,25 +1,11 @@
-const { types: convTypesInfo } = require('conventional-commit-types');
+const typesInfo = require('./typesInfo.json');
+const { omitWIP } = require('./utils');
 
-const customTypesInfo = require('./customTypesInfo');
+const types = Object.keys(typesInfo);
 
-const typesInfo = {
-  ...convTypesInfo,
-  ...customTypesInfo,
-};
-
-module.exports.convTypesInfo = convTypesInfo;
-
-module.exports.convTypes = Object.keys(convTypesInfo);
-
-module.exports.typesInfo = typesInfo;
-
-module.exports.types = Object.keys(typesInfo);
-
-module.exports.configureWidths = function configureWidths(widths = {}) {
-  const { maxHeaderWidth = 50, maxLineWidth = 72 } = widths;
-
-  return {
-    maxHeaderWidth,
-    maxLineWidth,
-  };
+module.exports = {
+  typesInfo,
+  types,
+  noWIPTypesInfo: omitWIP(typesInfo),
+  noWIPTypes: omitWIP(types),
 };
