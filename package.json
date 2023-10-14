@@ -28,7 +28,7 @@
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "jest-preset-ruby": "^1.0.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^5.0.0"
   },
   "engines": {
     "node": ">=10.16.3"
